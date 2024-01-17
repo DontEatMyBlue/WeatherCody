@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outfit Recommendation Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  /* Additional CSS if needed */
+  .grid-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+  .grid-item {
+    width: 100px;
+    height: 100px;
+    background-color: #f3f4f6; /* Light gray for light theme */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e5e7eb; /* Slightly darker gray for border */
+  }
+</style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+<div class="container mx-auto px-4 py-8">
+  <header class="flex justify-between items-center mb-8">
+    <h1 class="text-xl font-semibold">Outfit Recommendation</h1>
+    <div>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">Login</button>
+      <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Sign Up</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="grid-box">
+      <!-- Placeholder for outfits, using solid colored rectangles -->
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <!-- More grid items can be added as needed -->
+    </div>
+  </main>
+</div>
+
+<script>
+  // JavaScript if needed
+</script>
+</body>
+</html>
