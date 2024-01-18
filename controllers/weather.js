@@ -2,7 +2,7 @@
     const moment = require('moment');
     
    
-    let time = moment().hours()-1 + "00";
+    let time = moment().hours()-2+"00";
     const  url = 'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst';
     let queryParams = '?' + encodeURIComponent('serviceKey') + '=' + process.env.API_KEY; /* Service Key*/
     queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /* */
