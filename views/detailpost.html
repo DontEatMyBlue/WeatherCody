@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Page Prototype</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 100px);
+    grid-template-rows: repeat(6, 100px);
+    gap: 0px;
+  }
+  .grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .photo-review {
+    grid-column: 1 / span 5;
+    grid-row: 5 / span 2;
+  }
+  .product-info {
+    grid-column: 6 / span 5;
+    grid-row: 1 / span 4;
+  }
+  .product-image {
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 4;
+  }
+  .navigation {
+    grid-column: 1 / span 5;
+    grid-row: 6;
+  }
+</style>
+</head>
+<body class="bg-gray-50 font-sans">
+<div class="grid-container mx-auto">
+  <div class="grid-item product-image">
+    <img src="https://via.placeholder.com/500x400" alt="Product Image" class="max-w-full h-auto">
+  </div>
+  <div class="grid-item photo-review">
+    <div class="flex space-x-2">
+      <button>&lt;</button>
+      <img src="https://via.placeholder.com/100" alt="Photo Review 1" class="h-24">
+      <img src="https://via.placeholder.com/100" alt="Photo Review 2" class="h-24">
+      <img src="https://via.placeholder.com/100" alt="Photo Review 3" class="h-24">
+      <button>&gt;</button>
+    </div>
+  </div>
+  <div class="grid-item product-info">
+    <div class="text-center">
+      <h1 class="text-2xl font-semibold">Product Title</h1>
+      <p class="text-gray-600">Some description text about the product, highlighting its features and benefits.</p>
+      <div class="mt-4">
+        <span class="text-lg font-bold">₩129,500</span>
+      </div>
+      <div class="mt-2">
+        <label for="size-select" class="sr-only">Size</label>
+        <select id="size-select" class="border rounded px-2 py-1">
+          <option>Size Option</option>
+        </select>
+      </div>
+      <div class="mt-4 space-x-2">
+        <button class="border rounded px-4 py-2">Add to Cart</button>
+        <button class="border rounded px-4 py-2">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="grid-item navigation">
+    <button class="border rounded px-4 py-2">Previous</button>
+    <button class="border rounded px-4 py-2">Next</button>
+  </div>
+</div>
+</body>
+</html>
