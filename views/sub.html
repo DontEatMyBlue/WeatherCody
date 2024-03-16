@@ -85,13 +85,7 @@
       font-size: 1.3rem; /* Increase title font size */
       font-weight: bold; /* Make title bold */
     }
-    .weather-info {
-      background-color: #f0f9ff; /* 하늘색 배경 */
-      border-left: 5px solid #60A5FA; /* 왼쪽에 강조선 */
-      padding: 1rem; /* 패딩 */
-      margin-bottom: 2rem; /* 아래쪽 마진 */
-      border-radius: 5px; /* 테두리 둥글게 */
-    }
+
   </style>
 </head>
 <body class="bg-white text-gray-800 font-sans">
@@ -127,13 +121,7 @@
 
     <main>
 
-      <div class="weather-info mb-8 p-4 rounded shadow-lg bg-blue-100">
-        <h2 class="text-lg font-semibold">Current Weather</h2>
-        <p id="location">Location: {{location}}</p>
-        <p id="temperature">Temperature: {{currentTemp}}°C</p>
-        <p id="weather">Weather: {{weather}}</p>
-      </div>
-      
+
       <div class="grid-box">
         {% for result in results %}
           <div class="grid-item">
@@ -159,36 +147,6 @@
   
 
   <script>
-    (function() {
-      if ("geolocation" in navigator) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          const latitude = position.coords.latitude;
-          const longitude = position.coords.longitude;
-    
-          // 서버의 /getWeather 라우트로 POST 요청을 보냅니다.
-          fetch('/getWeather', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            credentials: 'include',
-            body: JSON.stringify({
-              latitude: latitude,
-              longitude: longitude,
-            }),
-          })
-          .then(response => response.json())
-          .then(data => {
-            console.log('Weather data from server:', data);
-          })
-          .catch(error => {
-            console.error('Error fetching weather from server:', error);
-          });
-        });
-      } else {
-        console.log("Geolocation is not supported by this browser.");
-      }
-    })();
     
   </script>
 </body>
